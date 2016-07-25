@@ -1,0 +1,30 @@
+{
+  "name": "globant-workshop-2016-api",
+  "version": "1.0.0",
+  "description": "An API developed using express.js. For training purposes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/globant-ui/GlobantWorkshop2016.git"
+  },
+  "keywords": [
+    "API",
+    "express.js"
+  ],
+  "author": {
+    "name": "Matias Bogado",
+    "email": "matias.bogado@globant.com",
+    "url": "https://ar.linkedin.com/in/matías-bogado-71108652"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/globant-ui/GlobantWorkshop2016/issues"
+  },
+  "homepage": "https://github.com/globant-ui/GlobantWorkshop2016#readme",
+  "dependencies": {
+
+  }
+}
