@@ -1,28 +1,15 @@
 'use strict';
-const PORT = 1338;
+const PORT = 5000;
 
-const cors = require('cors');
-//const Datastore = require('nedb');
+//const cors = require('cors');
 const express = require('express');
-const bodyParser = require('body-parser');
-
-const CommentsService = require('./core/services/comments');
-const api = require('./api');
-
-/*const db = new Datastore({
-  filename: 'datastore/workshop.db',
-  autoload: true
-});*/
-
+const helmet = require('helmet');
+const router = require('./api/router');
+//const bodyParser = require('body-parser');
 const app = express();
 
-app.use(cors());
-app.use(bodyParser.json());
-
-app.use('/bands', api.bandsRoutes(db, commentsSrv));
-app.use('/albums', api.albumsRoutes(db, commentsSrv));
-app.use('/tracks', api.tracksRoutes(db, commentsSrv));
-app.use('/artists', api.artistsRoutes(db, commentsSrv));
-app.use('/comments', api.commentsRoutes(commentsSrv));
+//app.use(helmet);
+app.use(router);
+//app.use(bodyParser.json());
 
 app.listen(PORT, () => console.log(`App started and listening on port ${PORT}`));
